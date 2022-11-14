@@ -4,7 +4,7 @@
 		"dockerfile": "Dockerfile",
 		"context": "."
 	},
-	"workspaceFolder": "/workspaces/pytorch",
+	"workspaceFolder": "/workspaces/pytorch_docker",
 
 	// Forward Jupyter port locally, mark required
 	"forwardPorts": [8888],
