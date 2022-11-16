@@ -2,6 +2,7 @@ FROM pytorch/pytorch:1.13.0-cuda11.6-cudnn8-runtime
 
 # default shell
 ENV SHELL /bin/bash
+SHELL [ "/bin/bash", "-l", "-c" ]
 
 # Create the user
 ARG USERNAME=pythonista
@@ -30,10 +31,8 @@ RUN apt-get update \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/*
 
+# install python packages
+RUN conda install -c conda-forge ipywidgets jupyterlab
+
 # [Optional] Set the default user. Omit if you want to keep the default as root.
 USER $USERNAME
-
-# install poetry
-# https://python-poetry.org/docs/#installing-with-the-official-installer
-RUN curl -sSL https://install.python-poetry.org | python3 -
-ENV PATH $PATH:/${USERNAME}/.local/bin
