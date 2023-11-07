@@ -25,7 +25,7 @@
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
 			"settings": { 
-				"python.defaultInterpreterPath": "/opt/conda/bin/python"
+				"python.defaultInterpreterPath": ".venv/bin/python"
 			},
 
 			// Add the IDs of extensions you want installed when the container is created.
@@ -37,7 +37,7 @@
 	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": "poetry install",
 
 	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "pythonista"
