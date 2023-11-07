@@ -1,5 +1,5 @@
 {
-	"name": "Pytorch test",
+	"name": "Pytorch",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "."
