@@ -19,9 +19,7 @@
 	// GPU
 	"runArgs": [
 		"--gpus",
-		"all",
-		"--name",
-		"pytorch-docker"
+		"all"
 	],
 	// Configure tool-specific properties.
 	"customizations": {

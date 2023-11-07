@@ -7,12 +7,6 @@ Docker で PyTorch 環境を構築する際のテンプレート.
 ### Build
 VSCode Dev Containers で Reopen in Container を実行するだけ.
 
-VSCode 付属のターミナルを使うか,
-```sh
-make attach
-```
-でコンテナにアタッチできる.
-
 ### Run Python Script
 初回のコンテナ起動後に poetry の仮想環境 `.venv/` がプロジェクト直下に作られる. `.venv/bin/python` が Python のパスとなる. `.venv/` を削除してしまった場合はコンテナを再度ビルドすればよい.
 
